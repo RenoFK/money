@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>DompetKu - Manajemen Uang Tunai</title>
+    <link rel="stylesheet" href="uang.css">
+<body>
+<div class="app-container">
+    <div class="header">
+        <h1>💵 DOMPETKU - MANAJEMEN UANG TUNAI</h1>
+        <p>Input jumlah lembaran uang di dompet | Catat pemasukan & pengeluaran</p>
+    </div>
+
+    <!-- Total Uang di Dompet -->
+    <div class="total-card">
+        <div class="total-label">💸 TOTAL UANG DI DOMPET</div>
+        <div class="total-amount" id="totalWalletAmount">Rp 0</div>
+        <div style="font-size: 0.85rem; color: #ffc9ae;">✓ Berdasarkan lembaran uang yang diinput</div>
+    </div>
+
+    <div class="two-columns">
+        <!-- Kolom Kiri: Input Lembaran Uang -->
+        <div class="card">
+            <h2>📝 INPUT LEMBARAN UANG</h2>
+            <div id="denominationInputs" class="denom-grid">
+                <!-- Dynamic dari JavaScript -->
+            </div>
+            <button class="btn" id="updateDenominationBtn">🔄 Update Total & Simpan</button>
+            <div style="font-size: 0.7rem; color: #ffbf9a; margin-top: 0.8rem; text-align: center;">
+                * Masukkan jumlah lembar untuk setiap pecahan
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Pemasukan & Pengeluaran -->
+        <div class="card">
+            <h2>📊 TRANSAKSI</h2>
+            <div class="form-group">
+                <label>Tipe Transaksi</label>
+                <select id="transactionType">
+                    <option value="income">💚 Pemasukan (uang masuk)</option>
+                    <option value="expense">❤️ Pengeluaran (uang keluar)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Deskripsi</label>
+                <input type="text" id="transDesc" placeholder="Contoh: Gaji, Belanja, Makan" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Jumlah (Rp)</label>
+                <input type="number" id="transAmount" placeholder="Masukkan nominal" value="">
+            </div>
+            <button class="btn" id="addTransactionBtn">➕ Tambahkan Transaksi</button>
+            
+            <div class="quick-actions">
+                <button class="btn-secondary" id="resetWalletBtn" style="flex:1;">🔄 Reset Dompet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Riwayat Transaksi -->
+    <div class="history-section">
+        <div class="history-header">
+            <h2>📜 RIWAYAT TRANSAKSI</h2>
+            <button class="clear-btn" id="clearHistoryBtn">🗑️ Hapus Semua</button>
+        </div>
+        <div class="transaction-list" id="transactionList">
+            <div style="text-align:center; color:#ffcfb5;">Belum ada transaksi</div>
+        </div>
+    </div>
+</div>
+
+<script src="uang.js"></script>
+</body>
+</html>

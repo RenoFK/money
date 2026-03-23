@@ -1,0 +1,316 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #14e1e5 0%, #0e6077 100%);
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff0e0, #ffaa80);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            color: #ffb4a2;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Total Card */
+        .total-card {
+            background: linear-gradient(145deg, #8b1a1a, #6e1414);
+            border-radius: 2rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.4);
+            border: 1px solid #ff7b5c;
+            text-align: center;
+        }
+
+        .total-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffcfb0;
+            font-weight: 600;
+        }
+
+        .total-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #fff2e6;
+            margin: 0.5rem 0;
+        }
+
+        .total-amount small {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #ffc09f;
+        }
+
+        /* Grid Layout */
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: #a82929;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+            border: 1px solid #e35f4a;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff1e0;
+            border-left: 5px solid #ffaa80;
+            padding-left: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Denomination Grid - Lembaran Uang */
+        .denom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .denom-item {
+            background: #6e1e1e;
+            border-radius: 1rem;
+            padding: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ff8562;
+            transition: all 0.2s;
+        }
+
+        .denom-item:hover {
+            background: #822a2a;
+            transform: translateY(-2px);
+        }
+
+        .denom-label {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #fff1de;
+        }
+
+        .denom-input {
+            width: 80px;
+            background: #4d1515;
+            border: 1.5px solid #ff7b5c;
+            border-radius: 0.8rem;
+            padding: 0.5rem;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .denom-input:focus {
+            outline: none;
+            border-color: #ffb485;
+            box-shadow: 0 0 0 2px rgba(255, 140, 70, 0.3);
+        }
+
+        .denom-subtotal {
+            font-size: 0.75rem;
+            color: #ffbf9a;
+            margin-top: 0.25rem;
+            text-align: center;
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #ffded0;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: #4d1515;
+            border: 1.5px solid #e0674b;
+            border-radius: 1rem;
+            color: white;
+            font-weight: 500;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #ffb485;
+            box-shadow: 0 0 0 2px rgba(255, 140, 70, 0.3);
+        }
+
+        .btn {
+            background: #ff6a44;
+            border: none;
+            padding: 0.75rem 1.2rem;
+            border-radius: 2rem;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #2d0808;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-top: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #ff855f;
+            transform: scale(0.98);
+        }
+
+        .btn-secondary {
+            background: #962b2b;
+            color: #ffe0d0;
+            border: 1px solid #ff7b5a;
+        }
+
+        .btn-secondary:hover {
+            background: #b13b3b;
+        }
+
+        /* Transaction History */
+        .history-section {
+            background: #a82929;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .history-header h2 {
+            font-size: 1.4rem;
+            color: #fff1e0;
+            border-left: 5px solid #ffaa80;
+            padding-left: 0.9rem;
+        }
+
+        .clear-btn {
+            background: #771d1d;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #ffcfb5;
+            cursor: pointer;
+            border: none;
+        }
+
+        .transaction-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .transaction-item {
+            background: #6e1e1e;
+            margin-bottom: 0.7rem;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-left: 5px solid;
+        }
+
+        .transaction-income {
+            border-left-color: #51ffa0;
+        }
+
+        .transaction-expense {
+            border-left-color: #ff7b5c;
+        }
+
+        .trans-desc {
+            font-weight: 600;
+            color: #fff1e6;
+        }
+
+        .trans-amount {
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .income-text {
+            color: #c2ffbc;
+        }
+
+        .expense-text {
+            color: #ffb18a;
+        }
+
+        .trans-time {
+            font-size: 0.7rem;
+            color: #ffcdb0;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        /* Quick Action Buttons */
+        .quick-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .two-columns {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .total-amount {
+                font-size: 2.2rem;
+            }
+            body {
+                padding: 1rem;
+            }
+        }
